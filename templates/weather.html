@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-3 text-center text-white">Weather Dashboard</h1>
+        <div class="row justify-content-center">
+            {% for item in forecast %}
+                <div class="col-sm-2 m-3 bg-white rounded shadow">
+                    <img src="{{ item.icon }}" alt="{{ item.description }}" class="mx-auto d-block my-3">
+                    <h5 class="text-center">{{ item.time }}</h5>
+                    <p class="text-center">{{ item.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
