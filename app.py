@@ -3,7 +3,7 @@ import requests
 import os
 
 api_key = os.getenv('WEATHER_API_KEY')
-api_key_new = "f99b90c163a7da224fd70f3194353e85"
+api_key_new = "YOUR_API_KEY"
 
 app = Flask(__name__)
 
